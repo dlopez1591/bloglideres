@@ -384,3 +384,38 @@ if (
     }, 1700);
   }
 }
+
+
+const wordShowcase = document.querySelector(".word-showcase");
+
+if (wordShowcase) {
+  const words = [
+    "ÉTICA",
+    "DENUNCIAR",
+    "BIEN COMÚN",
+    "MEMORIA",
+    "CUESTIONAR",
+    "INTERESES PERSONALES",
+    "DIGNIDAD",
+    "RESPONSABILIDAD",
+    "NO CALLAR",
+    "CAMBIAR EL MUNDO"
+  ];
+
+  let wordIndex = 0;
+
+  function changeShowcaseWord() {
+    wordShowcase.classList.remove("word-enter");
+    void wordShowcase.offsetWidth;
+
+    wordShowcase.textContent = words[wordIndex];
+    wordShowcase.classList.add("word-enter");
+
+    wordIndex = (wordIndex + 1) % words.length;
+  }
+
+  changeShowcaseWord();
+  setInterval(changeShowcaseWord, 1800);
+} else {
+  console.warn("No se encontró .word-showcase en el HTML");
+}

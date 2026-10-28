@@ -419,3 +419,4 @@ if (wordShowcase) {
 } else {
   console.warn("No se encontró .word-showcase en el HTML");
 }
+

@@ -18,10 +18,295 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   storyCards.forEach(card => { const categories = (card.dataset.categories || '').split(' '); card.hidden = filter !== 'all' && !categories.includes(filter); });
 }));
 const profiles = {
-  brigitte: { eyebrow:'PERFIL / BIODIVERSIDAD', title:'Brigitte Baptiste', body:`<p><strong>¿Qué podemos aprender?</strong> Que hablar de biodiversidad no es hablar únicamente de bosques lejanos o especies en peligro. También es hablar de economía, cultura, decisiones públicas y de nuestra relación con otras formas de vida.</p><h3>Vida y obra</h3><p>Brigitte Baptiste es una bióloga colombiana reconocida por su trabajo en biodiversidad y sostenibilidad. Ha desarrollado labores de investigación, divulgación y liderazgo institucional relacionadas con la conservación y el conocimiento de los sistemas vivos.</p><h3>Acciones sociales</h3><p>Su trabajo conecta el conocimiento científico con conversaciones públicas sobre desarrollo, conservación y diversidad. Su trayectoria abre una pregunta ética: ¿cómo tomar decisiones que consideren las necesidades humanas y la vida que compartimos con otras especies?</p><h3>Reconocimientos</h3><p>Completa esta sección con reconocimientos concretos a partir de fuentes oficiales o institucionales. Hay que poder comprobarlos.</p><p><strong>Pregunta para debatir:</strong> ¿Es posible hablar de progreso si destruimos los sistemas naturales que lo sostienen?</p>`},
-  francisco: { eyebrow:'PERFIL / ACTIVISMO JUVENIL', title:'Francisco Vera', body:`<p><strong>¿Qué podemos aprender?</strong> Que la participación ciudadana no debería depender de la edad, y que el cuidado del planeta exige escuchar a quienes vivirán más tiempo con las consecuencias de las decisiones actuales.</p><h3>Vida y obra</h3><p>Francisco Vera es un activista ambiental colombiano conocido por promover la protección de la naturaleza y la participación de niñas, niños y jóvenes en asuntos ambientales.</p><h3>Acciones sociales</h3><p>Su activismo ha buscado ampliar la conversación pública sobre cambio climático, educación ambiental y derecho a un ambiente sano. Su presencia en espacios de discusión muestra cómo las voces jóvenes pueden entrar en debates que a menudo se reservan para adultos.</p><h3>Reconocimientos</h3><p>Añade aquí reconocimientos específicos que puedas verificar con fuentes confiables y fecha. Distingue entre un premio formal, una invitación institucional y una mención en medios.</p><p><strong>Pregunta para debatir:</strong> ¿Escuchamos realmente a la juventud o solo la invitamos a hablar cuando queda bien en la foto?</p>`},
-  jesus: { eyebrow:'PERFIL / MEMORIA Y DERECHOS HUMANOS', title:'Jesús Abad Colorado', body:`<p><strong>¿Qué podemos aprender?</strong> Que documentar la violencia también implica una responsabilidad ética: mirar a las personas con dignidad y no reducir sus vidas a una cifra o a una imagen impactante.</p><h3>Vida y obra</h3><p>Jesús Abad Colorado es un fotoperiodista colombiano reconocido por su trabajo documental sobre el conflicto armado, las víctimas y las comunidades afectadas por la violencia en Colombia.</p><h3>Acciones sociales</h3><p>Su trabajo fotográfico contribuye a la memoria colectiva y permite acercarse a experiencias que muchas veces quedan fuera del relato oficial. Las imágenes pueden ayudar a reconocer a las víctimas como personas con historias, vínculos y derechos.</p><h3>Reconocimientos</h3><p>Completa esta parte con premios, exposiciones o distinciones verificadas en fuentes institucionales. En un trabajo sobre memoria, la precisión también es una forma de respeto.</p><p><strong>Pregunta para debatir:</strong> ¿Qué responsabilidad tenemos frente a las historias de dolor que vemos, compartimos o decidimos ignorar?</p>`}
-};
+ 
+  
+brigitte: {
+  eyebrow: 'PERFIL / BIODIVERSIDAD Y DIVERSIDAD',
+  title: 'Brigitte Baptiste',
+  body: `
+    <img
+      src="assets/images/bri.png"
+      alt="Retrato de Brigitte Baptiste"
+      class="profile-image"
+    >
+
+    <p class="profile-intro">
+      <strong>¿Qué podemos aprender de ella?</strong>
+      Que la biodiversidad no es solamente un asunto de árboles,
+      animales o paisajes bonitos. También tiene que ver con la
+      economía, la cultura, las decisiones políticas y la forma
+      en que convivimos con otras especies.
+    </p>
+
+    <h3>Vida y obra</h3>
+    <p>
+      Brigitte Baptiste es una bióloga colombiana especializada
+      en biodiversidad y sostenibilidad. Estudió Biología en la
+      Pontificia Universidad Javeriana y realizó estudios de
+      posgrado en conservación y desarrollo tropical en la
+      Universidad de Florida. Su trayectoria combina la
+      investigación científica, la docencia y la divulgación
+      ambiental.
+    </p>
+    <p>
+      Durante varios años estuvo vinculada al Instituto de
+      Investigación de Recursos Biológicos Alexander von Humboldt,
+      entidad dedicada al conocimiento de la biodiversidad
+      colombiana. Allí llegó a ocupar la dirección general.
+      En 2019 asumió la rectoría de la Universidad Ean, desde
+      donde impulsó iniciativas relacionadas con el
+      emprendimiento y la sostenibilidad.
+    </p>
+
+    <h3>Acciones sociales</h3>
+    <p>
+      Su trabajo ha contribuido a conectar la ciencia con las
+      decisiones sobre el territorio, la conservación y el
+      desarrollo sostenible. También ha promovido conversaciones
+      públicas sobre diversidad de género y ha mostrado que
+      los temas ambientales no pueden separarse de la cultura,
+      las comunidades y las actividades económicas.
+    </p>
+    <p>
+      Su trayectoria nos invita a cuestionar una idea muy común:
+      que el progreso consiste únicamente en producir y consumir
+      más. Pensar en sostenibilidad también implica preguntarnos
+      qué recursos utilizamos, qué consecuencias generan nuestras
+      decisiones y quiénes asumen sus costos.
+    </p>
+
+    <h3>Reconocimientos</h3>
+    <ul>
+      <li>
+        <strong>Doctorado honoris causa en Gestión Ambiental</strong>,
+        otorgado por la Universidad de la Paz (UNIPAZ).
+      </li>
+      <li>
+        <strong>Reconocimiento de Forbes Colombia en 2020</strong>,
+        al incluirla entre las 50 mujeres más poderosas del país.
+      </li>
+      <li>
+        <strong>Galardón Prince Claus de 2017</strong>,
+        relacionado con sus aportes al desarrollo y la cultura.
+      </li>
+    </ul>
+
+    <h3>La ética detrás de su trabajo</h3>
+    <p>
+      Su trayectoria permite relacionar la ética con la
+      responsabilidad ambiental: nuestras decisiones no afectan
+      únicamente a las personas que viven hoy, sino también a
+      las comunidades futuras y a los ecosistemas de los que
+      dependemos.
+    </p>
+
+    <p>
+      <strong>Pregunta para debatir:</strong>
+      ¿Podemos llamar progreso a un modelo de desarrollo que
+      genera beneficios económicos, pero deteriora la
+      biodiversidad y afecta a las comunidades?
+    </p>
+
+    <h3>Fuentes para consultar</h3>
+    <ul>
+      <li>
+        <a href="https://repository.universidadean.edu.co/entities/person/b00d78ef-a276-4054-b18c-d2c31fb4c94f"
+           target="_blank" rel="noopener noreferrer">
+          Universidad Ean: perfil biográfico
+        </a>
+      </li>
+      <li>
+        <a href="https://universidadean.edu.co/noticias/brigitte-baptiste-es-una-de-las-50-mujeres-mas-poderosas-de-colombia-revista-forbes"
+           target="_blank" rel="noopener noreferrer">
+          Universidad Ean: reconocimiento de Forbes
+        </a>
+      </li>
+      <li>
+        <a href="https://www.pactoglobal-colombia.org/conferencistas-congreso/brigitte-baptiste.html"
+           target="_blank" rel="noopener noreferrer">
+          Pacto Global Red Colombia: trayectoria y galardón Prince Claus
+        </a>
+      </li>
+    </ul>
+  `
+},
+ 
+francisco: {
+  eyebrow: 'PERFIL / ACTIVISMO AMBIENTAL JUVENIL',
+  title: 'Francisco Vera',
+  body: `
+    <img
+      src="assets/images/fra.png"
+      alt="Retrato ilustrado de Francisco Vera en un entorno ambiental"
+      class="profile-image"
+    >
+
+    <p class="profile-intro">
+      <strong>¿Qué podemos aprender de él?</strong>
+      Que la edad no debería ser una barrera para participar
+      en las decisiones que afectan nuestro futuro. Defender
+      el planeta también significa exigir que las nuevas
+      generaciones sean escuchadas.
+    </p>
+
+    <h3>Vida y obra</h3>
+    <p>
+      Francisco Vera Manzanares es un activista ambiental
+      colombiano que se dio a conocer desde niño por su
+      participación en iniciativas de protección de la
+      naturaleza y educación ambiental. Su trabajo ha
+      contribuido a visibilizar el papel de niñas, niños
+      y jóvenes en las conversaciones sobre la crisis
+      climática y la sostenibilidad.
+    </p>
+
+    <h3>Acciones sociales</h3>
+    <p>
+      A través de sus intervenciones públicas y su activismo,
+      ha promovido la defensa del medioambiente, la educación
+      ambiental y la participación de la infancia en asuntos
+      que afectan su presente y su futuro. Su trayectoria
+      cuestiona la idea de que solamente los adultos tienen
+      derecho a opinar sobre las decisiones colectivas.
+    </p>
+    <p>
+      Su ejemplo también permite reflexionar sobre la
+      responsabilidad de los gobiernos, las empresas y la
+      ciudadanía frente al cambio climático, la pérdida de
+      biodiversidad y el uso de los recursos naturales.
+    </p>
+
+    <h3>Reconocimientos e incidencia</h3>
+    <p>
+      Su activismo ha recibido atención nacional e internacional
+      y lo ha llevado a participar en espacios de conversación
+      sobre derechos ambientales y participación juvenil.
+      Para documentar premios o distinciones específicas,
+      es importante consultar fuentes institucionales y
+      confirmar el nombre y la fecha de cada reconocimiento.
+    </p>
+
+    <h3>La ética detrás de su trabajo</h3>
+    <p>
+      La defensa ambiental plantea una pregunta de justicia
+      entre generaciones: ¿es justo tomar decisiones hoy
+      cuyos costos ambientales tendrán que asumir, en gran
+      medida, quienes todavía están creciendo?
+    </p>
+
+    <p>
+      <strong>Pregunta para debatir:</strong>
+      ¿Escuchamos realmente a la juventud cuando habla del
+      futuro o solamente la invitamos a participar cuando
+      sus opiniones resultan cómodas?
+    </p>
+
+    <h3>Fuentes para investigar</h3>
+    <ul>
+      <li>
+        <a href="https://www.unicef.org/"
+           target="_blank" rel="noopener noreferrer">
+          UNICEF: derechos de la infancia y participación
+        </a>
+      </li>
+      <li>
+        <a href="https://www.un.org/es/climatechange"
+           target="_blank" rel="noopener noreferrer">
+          Naciones Unidas: cambio climático
+        </a>
+      </li>
+    </ul>
+  `
+},
+
+jesus: {
+  eyebrow: 'PERFIL / MEMORIA Y DERECHOS HUMANOS',
+  title: 'Jesús Abad Colorado',
+  body: `
+    <img
+      src="assets/images/je2.png"
+      alt="Retrato de Jesús Abad Colorado relacionado con la memoria fotográfica"
+      class="profile-image"
+    >
+
+    <p class="profile-intro">
+      <strong>¿Qué podemos aprender de él?</strong>
+      Que una fotografía puede ser mucho más que una imagen:
+      también puede conservar la memoria de una comunidad,
+      hacer visibles a las víctimas y ayudarnos a comprender
+      las consecuencias humanas de la violencia.
+    </p>
+
+    <h3>Vida y obra</h3>
+    <p>
+      Jesús Abad Colorado es un fotoperiodista y documentalista
+      colombiano reconocido por su trabajo sobre el conflicto
+      armado, las víctimas y las comunidades afectadas por la
+      violencia en Colombia. A través de su cámara ha registrado
+      historias de dolor, resistencia, dignidad y esperanza.
+    </p>
+    <p>
+      Su trabajo documental se ha convertido en un aporte
+      importante a la memoria del país, pues permite acercarse
+      a experiencias humanas que no siempre ocupan un lugar
+      central en los relatos sobre el conflicto.
+    </p>
+
+    <h3>Acciones sociales</h3>
+    <p>
+      Su labor fotográfica contribuye a preservar testimonios
+      visuales de las consecuencias de la guerra y a reconocer
+      a las personas afectadas como seres humanos con historias,
+      familias, derechos y proyectos de vida.
+    </p>
+    <p>
+      Sus imágenes también invitan a reflexionar sobre el papel
+      de los medios de comunicación y de quienes documentan el
+      sufrimiento ajeno. Mostrar una realidad difícil requiere
+      sensibilidad, contexto y respeto por la dignidad de las
+      personas retratadas.
+    </p>
+
+    <h3>Reconocimientos e incidencia</h3>
+    <p>
+      Su obra ha sido presentada en exposiciones y proyectos
+      de memoria relacionados con el conflicto armado colombiano.
+      Para incorporar premios o distinciones concretas, conviene
+      verificar sus nombres, fechas y entidades otorgantes en
+      fuentes oficiales o institucionales.
+    </p>
+
+    <h3>La ética detrás de su trabajo</h3>
+    <p>
+      La fotografía documental plantea un dilema ético:
+      ¿cómo mostrar el sufrimiento sin convertirlo en espectáculo?
+      Su trabajo permite pensar en la responsabilidad de informar,
+      preservar la memoria y tratar a las víctimas con dignidad.
+    </p>
+
+    <p>
+      <strong>Pregunta para debatir:</strong>
+      ¿Qué responsabilidad tenemos frente a las historias de
+      dolor que vemos, compartimos o decidimos ignorar?
+    </p>
+
+    <h3>Fuentes para investigar</h3>
+    <ul>
+      <li>
+        <a href="https://centrodememoriahistorica.gov.co/"
+           target="_blank" rel="noopener noreferrer">
+          Centro Nacional de Memoria Histórica
+        </a>
+      </li>
+      <li>
+        <a href="https://www.comisiondelaverdad.co/"
+           target="_blank" rel="noopener noreferrer">
+          Comisión de la Verdad de Colombia
+        </a>
+      </li>
+    </ul>
+  `
+}};
 const dialog = document.querySelector('#storyDialog');
 document.querySelectorAll('.text-link').forEach(button => button.addEventListener('click', () => {
   const profile = profiles[button.dataset.person]; if (!profile || !dialog) return;
